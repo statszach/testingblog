@@ -1,8 +1,10 @@
 # On the presentation of data: No more than two significant digits, please
 
+## *A*dvanced *QUA*n*TI*tative topics to *C*heckout (AQUATIC) Blog
+
 ### Zach Kunicki, QSP Postdoc
 
-Hey QSPB readers! If you’re like me, you’ve had it drilled into your head that data should be presented to two decimal places. The only exception is p-values, where they can go to three decimal places if (and only if) p < .001. Today’s blog post is challenging that notion, and giving a new one: no more than two significant digits, please.
+Hey AQUATIC readers! If you’re like me, you’ve had it drilled into your head that data should be presented to two decimal places. The only exception is p-values, where they can go to three decimal places if (and only if) p < .001. Today’s blog post is challenging that notion, and giving a new one: no more than two significant digits, please.
 
 First, what’s a significant digit? Cole (2015) defines this as “the number of all digits ignoring the decimal point, and ignoring all leading zeros and some trailing zeros” (p. 608). Van Belle (2011) and Ehrenberg (1977) have similar rules, although they use the term effective digits instead of significant digits.
 
