@@ -18,33 +18,25 @@ Second, 14 per 100 is just easier to understand than 14.06. I can easily refer t
 
 Third, it is going to make reporting my findings in tables easier. Since this is a descriptive epidemiology project, I’m going to be reporting both the overall prevalence and looking at prevalence among subgroups. Let’s take a look at the table below illustrating this.
 
+**Table 1: Examples of Displaying Prevalence**
 /***
-\begin{table}[]
-\centering
-\caption{Table 1: Examples of Displaying Prevalence}
-\label{table1}
-\begin{tabular}{|l|l|l|}
-\hline
-\textbf{Variable} & \textbf{Prevalence (per 100.00}  & \textbf{Prevalence (per 100)} \\ \hline
-Variable  & Prevalence (per 100.00)     & Per Prevalence (per 100)  \\ \hline
-Overall & 14.06 & 14 \\
-*Age Group*  & & \\
-18-24 & 17.22 & 17 \\
-25-34 & 21.94 & 22 \\
-35-44 & 36.78 & 37 \\
-45-54 & 14.87 & 15 \\
-55-64 & 11.89 & 12 \\
-65+ & 5.24 & 5 \\
-\hline
-\end{tabular}
-\end{table}
+| __Variable__  | __Prevalence (per 100.00)__  | __Prevalence (per 100)__ | 
+| ------------- | ---------------------------- | ------------------------ |
+| Overall | 14.06 | 14 |
+|*Age Group*  |  |  |
+|18-24 | 17.22 | 17 |
+|25-34 | 21.94 | 22 |
+|35-44 | 36.78 | 37 |
+|45-54 | 14.87 | 15 |
+|55-64 | 11.89 | 12 |
+|65+   | 5.24  | 5  | 
 ***/
 
 The prevalence per 100 column, without the two additional decimal places, is much cleaner and easier to read while also communicating the same information. The additional information provided by the two extra decimal places does not make the results more precise – really, it just makes the results more confusing.
 
-This two significant digit principle can be applied to nearly all instances of statistical reporting. Consider a population health study where you have sample sizes of 1,515,235, 1,621,351, and 1,444,346. What do these numbers tell you that 1.5 million, 1.6 million, and 1.4 million do not? What does a χ² value of 237.98 tell you that a value of 238 does not? What does r = 0.78 tell you that r = .78 does not? In all these cases, reporting out to the two significant digits is much easier to comprehend without changing the precision of results.
+This two significant digit principle can be applied to nearly all instances of statistical reporting. Consider a population health study where you have sample sizes of 1,515,235, 1,621,351, and 1,444,346. What do these numbers tell you that 1.5 million, 1.6 million, and 1.4 million do not? What does a $\chi^{2}$ value of 237.98 tell you that a value of 238 does not? What does *r* = 0.78 tell you that *r* = .78 does not? In all these cases, reporting out to the two significant digits is much easier to comprehend without changing the precision of results.
 
-While two significant digits is a good guideline, it is still on you as the researcher to determine exactly what the two significant digits are, and if you need to use one significant digit or more than two significant digits. Consider p-values greater than .10. Do we need to know p = .23? Not really, so p = .2 is enough. On the other hand, if you are reporting percent change over time, you may need to report higher than 100%, which would be three significant digits. Cole (2015) also advocates that in some cases you may want to follow the rule of four significant digits when reporting risk or odds ratios, especially if the values are very close to 1.
+While two significant digits is a good guideline, it is still on you as the researcher to determine exactly what the two significant digits are, and if you need to use one significant digit or more than two significant digits. Consider p-values greater than .10. Do we need to know *p* = .23? Not really, so *p* = .2 is enough. On the other hand, if you are reporting percent change over time, you may need to report higher than 100%, which would be three significant digits. Cole (2015) also advocates that in some cases you may want to follow the rule of four significant digits when reporting risk or odds ratios, especially if the values are very close to 1.
 
 Ultimately though, this post can be summed up as another extension of the parsimony principle. We want things to be as simple as possible, but no simpler. This applies with the reporting of results just as much as it applies to model building. So, when it comes to presenting your data, it’s time to let go of the “two decimal place” rule and adopt the “two significant digits” rule instead. It’ll make things simpler, more comprehensible, and no less precise.
 
@@ -52,8 +44,8 @@ Unless of course, an editor makes you go out to the two decimal places. Then, yo
 
 ## References
 
-### Cole, T. J. (2015). Too many digits: the presentation of numerical data. Archives of Disease in Childhood, 100(7), 608-609.
+Cole, T. J. (2015). Too many digits: the presentation of numerical data. Archives of Disease in Childhood, 100(7), 608-609.
 
-### Ehrenberg, A. S. (1977). Rudiments of numeracy. Journal of the Royal Statistical Society: Series A (General), 140(3), 277-297.
+Ehrenberg, A. S. (1977). Rudiments of numeracy. Journal of the Royal Statistical Society: Series A (General), 140(3), 277-297.
 
-### Van Belle, G. (2011). Statistical rules of thumb. John Wiley & Sons.
+Van Belle, G. (2011). Statistical rules of thumb. John Wiley & Sons.
