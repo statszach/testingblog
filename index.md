@@ -1,37 +1,59 @@
-## Welcome to GitHub Pages
+# On the presentation of data: No more than two significant digits, please
 
-You can use the [editor on GitHub](https://github.com/zachkunicki/testingblog/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+### Zach Kunicki, QSP Postdoc
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Hey QSPB readers! If you’re like me, you’ve had it drilled into your head that data should be presented to two decimal places. The only exception is p-values, where they can go to three decimal places if (and only if) p $<$ .001. Today’s blog post is challenging that notion, and giving a new one: no more than two significant digits, please.
 
-### Markdown
+First, what’s a significant digit? Cole (2015) defines this as “the number of all digits ignoring the decimal point, and ignoring all leading zeros and some trailing zeros” (p. 608). Van Belle (2011) and Ehrenberg (1977) have similar rules, although they use the term effective digits instead of significant digits.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+Okay, what’s a leading zero and a trailing zero? A good example of a leading zero comes from correlations. If you report *r* = 0.50, the 0 before the decimal point is the leading zero. Good examples of trailing zeros come from presenting results from population-level datasets. If you report *n* = 325,000 persons a part of a given category, the three 0s after the comma are trailing zeros.
 
-```markdown
-Syntax highlighted code block
+Now that we have everything defined, let’s think this “two significant digits” rule through with an example. In a project I’m currently working on, I found the prevalence of binge drinking to be 14.06 per 100 persons. My training throughout undergraduate and graduate school suggests that is exactly how I should report the results in text – 14.06 per 100.
 
-# Header 1
-## Header 2
-### Header 3
+Let’s think about this though. What does 14.06 tell us that 14 doesn’t? I’d argue, very little and that I should just go with 14 per 100 instead. 
 
-- Bulleted
-- List
+First, 14 is the point of two significant digits. My interpretation of the results is not going to change as the X in 14.X or 14.XX varies. 
 
-1. Numbered
-2. List
+Second, 14 per 100 is just easier to understand than 14.06. I can easily refer to this as 14$%$, both when reporting the results in-text, when presenting the results at a conference, and when discussing this finding with other researchers.
 
-**Bold** and _Italic_ and `Code` text
+Third, it is going to make reporting my findings in tables easier. Since this is a descriptive epidemiology project, I’m going to be reporting both the overall prevalence and looking at prevalence among subgroups. Let’s take a look at the table below illustrating this.
 
-[Link](url) and ![Image](src)
-```
+/***
+\begin{table}[]
+\centering
+\caption{Table 1: Examples of Displaying Prevalence}
+\label{table1}
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{Variable} & \textbf{Prevalence (per 100.00}  & \textbf{Prevalence (per 100)} \\ \hline
+Variable  & Prevalence (per 100.00)     & Per Prevalence (per 100)  \\ \hline
+Overall & 14.06 & 14 \\
+*Age Group*  & & \\
+18-24 & 17.22 & 17 \\
+25-34 & 21.94 & 22 \\
+35-44 & 36.78 & 37 \\
+45-54 & 14.87 & 15 \\
+55-64 & 11.89 & 12 \\
+65+ & 5.24 & 5 \\
+\hline
+\end{tabular}
+\end{table}
+***/
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+The prevalence per 100 column, without the two additional decimal places, is much cleaner and easier to read while also communicating the same information. The additional information provided by the two extra decimal places does not make the results more precise – really, it just makes the results more confusing.
 
-### Jekyll Themes
+This two significant digit principle can be applied to nearly all instances of statistical reporting. Consider a population health study where you have sample sizes of 1,515,235, 1,621,351, and 1,444,346. What do these numbers tell you that 1.5 million, 1.6 million, and 1.4 million do not? What does a χ² value of 237.98 tell you that a value of 238 does not? What does r = 0.78 tell you that r = .78 does not? In all these cases, reporting out to the two significant digits is much easier to comprehend without changing the precision of results.
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/zachkunicki/testingblog/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+While two significant digits is a good guideline, it is still on you as the researcher to determine exactly what the two significant digits are, and if you need to use one significant digit or more than two significant digits. Consider p-values greater than .10. Do we need to know p = .23? Not really, so p = .2 is enough. On the other hand, if you are reporting percent change over time, you may need to report higher than 100%, which would be three significant digits. Cole (2015) also advocates that in some cases you may want to follow the rule of four significant digits when reporting risk or odds ratios, especially if the values are very close to 1.
 
-### Support or Contact
+Ultimately though, this post can be summed up as another extension of the parsimony principle. We want things to be as simple as possible, but no simpler. This applies with the reporting of results just as much as it applies to model building. So, when it comes to presenting your data, it’s time to let go of the “two decimal place” rule and adopt the “two significant digits” rule instead. It’ll make things simpler, more comprehensible, and no less precise.
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+Unless of course, an editor makes you go out to the two decimal places. Then, you gotta do what you gotta do to get published.
+
+## References
+
+### Cole, T. J. (2015). Too many digits: the presentation of numerical data. Archives of Disease in Childhood, 100(7), 608-609.
+
+### Ehrenberg, A. S. (1977). Rudiments of numeracy. Journal of the Royal Statistical Society: Series A (General), 140(3), 277-297.
+
+### Van Belle, G. (2011). Statistical rules of thumb. John Wiley & Sons.
