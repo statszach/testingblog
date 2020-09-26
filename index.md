@@ -1,6 +1,6 @@
 # On the presentation of data: No more than two significant digits, please
 
-## *A*dvanced *QUA*n*TI*tative topics to *C*heckout (AQUATIC) Blog
+## **A**dvanced **QUA**n**TI**tative topics to **C**heckout (AQUATIC) Blog
 
 ### Zach Kunicki, QSP Postdoc
 
