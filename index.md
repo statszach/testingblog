@@ -19,7 +19,7 @@ Second, 14 per 100 is just easier to understand than 14.06. I can easily refer t
 Third, it is going to make reporting my findings in tables easier. Since this is a descriptive epidemiology project, I’m going to be reporting both the overall prevalence and looking at prevalence among subgroups. Let’s take a look at the table below illustrating this.
 
 **Table 1: Examples of Displaying Prevalence**
-/***
+
 | __Variable__  | __Prevalence (per 100.00)__  | __Prevalence (per 100)__ | 
 | ------------- | ---------------------------- | ------------------------ |
 | Overall | 14.06 | 14 |
@@ -30,7 +30,6 @@ Third, it is going to make reporting my findings in tables easier. Since this is
 |45-54 | 14.87 | 15 |
 |55-64 | 11.89 | 12 |
 |65+   | 5.24  | 5  | 
-***/
 
 The prevalence per 100 column, without the two additional decimal places, is much cleaner and easier to read while also communicating the same information. The additional information provided by the two extra decimal places does not make the results more precise – really, it just makes the results more confusing.
 
