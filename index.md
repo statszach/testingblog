@@ -2,7 +2,7 @@
 
 ### Zach Kunicki, QSP Postdoc
 
-Hey QSPB readers! If you’re like me, you’ve had it drilled into your head that data should be presented to two decimal places. The only exception is p-values, where they can go to three decimal places if (and only if) p $<$ .001. Today’s blog post is challenging that notion, and giving a new one: no more than two significant digits, please.
+Hey QSPB readers! If you’re like me, you’ve had it drilled into your head that data should be presented to two decimal places. The only exception is p-values, where they can go to three decimal places if (and only if) p < .001. Today’s blog post is challenging that notion, and giving a new one: no more than two significant digits, please.
 
 First, what’s a significant digit? Cole (2015) defines this as “the number of all digits ignoring the decimal point, and ignoring all leading zeros and some trailing zeros” (p. 608). Van Belle (2011) and Ehrenberg (1977) have similar rules, although they use the term effective digits instead of significant digits.
 
@@ -14,7 +14,7 @@ Let’s think about this though. What does 14.06 tell us that 14 doesn’t? I’
 
 First, 14 is the point of two significant digits. My interpretation of the results is not going to change as the X in 14.X or 14.XX varies. 
 
-Second, 14 per 100 is just easier to understand than 14.06. I can easily refer to this as 14$%$, both when reporting the results in-text, when presenting the results at a conference, and when discussing this finding with other researchers.
+Second, 14 per 100 is just easier to understand than 14.06. I can easily refer to this as 14%, both when reporting the results in-text, when presenting the results at a conference, and when discussing this finding with other researchers.
 
 Third, it is going to make reporting my findings in tables easier. Since this is a descriptive epidemiology project, I’m going to be reporting both the overall prevalence and looking at prevalence among subgroups. Let’s take a look at the table below illustrating this.
 
