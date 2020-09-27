@@ -1,0 +1,83 @@
+---
+title: "Different versions of BIC and how to use them"
+author: "Rich Jones"
+date: "9/27/2020"
+output: html_document
+header-includes:
+- \usepackage{placeins}
+---
+
+# On different versions of BIC and how to use them
+
+## **A**dvanced **QUA**n**TI**tative topics to **C**heckout (AQUATIC) Blog
+
+### Rich Jones, QSP Director
+
+## Summary
+
+Different software applications and authors use different formulations for the Bayesian Information Criterion (BIC). All incorporate the model loglikelihood ($logL$), sample size ($n$), and number of parameters ($r$). For example, Mplus and Stata use the Schwarz BIC
+
+$$BIC(S)  = -2 \ logL + r \ log(n) $$ 
+Daniel Nagin uses a different formulation: 
+
+$$BIC(N) = logL - 0.5 \ r \ log(n)$$
+
+These are scaled differently, but: $$BIC(N) = -0.5 \ BIC(S)$$.
+
+
+## Bayes factors and model comparison
+
+With the Schwarz BIC, smaller is better. With the Nagin BIC, larger is better. For both, the smaller absolute value is better, so that's a better rule to keep in mind. Nagin cites Kass & Wasserman (1995) as indicating that a **Bayes factor** of greater than 10 provides strong evidence of a target model in favor of a reference model. Further, the Bayes factor can be approximated with $B_{ij} \approx exp(BIC_i-BIC_j)$. Equivalently, if $BIC_i-BIC_j$ is greater than $ln(10)$, or 2.303, there is strong evidence in favor of the target model. These are probably all references to BIC(N). Therefore we have strong evidence in favor of a target model $j$ relative to reference model $i$ when:
+
+$$10  < B_{ij}$$ 
+$$ ln(10)   < BIC(N)_j - BIC(N)_i$$ 
+$$2.303  < -0.5 BIC(S)_j - -0.5 BIC(S)_i $$ 
+      $$ < 0.5 \left(BIC(S)_i - BIC(S)_j\right) $$
+$$4.61    < BIC(S)_i - BIC(S)_j $$
+
+And we could round that to a difference in Schwarz' BIC of 5 to indicate strong preference for a target model relative to a reference model.
+
+## References
+
+Nagin, D. (2009). Group-Based Modeling of Development. In Group-Based Modeling of Development. Harvard University Press.
+
+Kass RE and Wasserman L. 1995. Bayes factor. Journal of the American Statistical Association, 90:773-795.
+
+Schwartz G. 1978. Estimating dimensions of a model. Annals of Statistics. 6:461-464
+
+## More Goodies
+
+If $BIC_{max}$ is the maximum BIC(N)(?) score of the $J$ different models under consideration, then the probability that a model $j$ is the correct model given the data ($p_j$) is:
+
+$$p_j = \frac{e^{BIC(N)_j-BIC(N)_{max}}}{\sum_{j}{e^{BIC(N)_j-BIC(N)_{max}}}}$$
+<!-- \begin{table}[h!] -->
+<!-- \begin{tabular}{r|l} -->
+<!-- \multicolumn{2}{l}{Jeffreys scale of evidence for Bayes factors}\\ -->
+<!-- \hline -->
+<!-- Bayes factor & Interpretation \\ -->
+<!-- \hline -->
+<!-- \( B_{ij} < 0.1 \) & Strong evidence for model \(j\) \\ -->
+<!-- \( 0.1 < B_{ij} < 0.\bar{3} \) & Moderate evidence for model \(j\) \\ -->
+<!-- \( 0.\bar{3} < B_{ij} < 1.0 \) & Weak evidence for model \(j\) \\ -->
+<!-- \( 1.0 < B_{ij} < 3.0 \) & Weak evidence for model \(i\) \\ -->
+<!-- \( 3.0 < B_{ij} < 10 \) & Moderate evidence for model \(i\) \\ -->
+<!-- \( 10 < B_{ij} \) & Strong evidence for model \(i\) \\ -->
+<!-- \hline -->
+<!-- \multicolumn{2}{l}{The Bayes factor is approximated with} \\ -->
+<!-- \multicolumn{2}{c}{\( B_{ij} = e^{BIC(N)_i-BIC(N)_j} \)} \\ -->
+<!-- \multicolumn{2}{l}{Source:} \\ -->
+<!-- \multicolumn{2}{l}{Table 4.2, page 69. Daniel S. Nagin. Group-Based} \\ -->
+<!-- \multicolumn{2}{l}{Modeling of Development. 2005. HUP, Cambridge MA.} \\ -->
+<!-- \hline -->
+<!-- \multicolumn{2}{l}{Note that:} \\ -->
+<!-- \multicolumn{2}{c}{\( ln(B_{ij}) = BIC(N)_i-BIC(N)_j \)} \\ -->
+<!-- \multicolumn{2}{c}{\( ln(10) \approx 2.303 \)} \\ -->
+
+<!-- \end{tabular} -->
+<!-- \end{table} -->
+
+If you are working with BIC(S), use:
+
+$$p_j = \frac{e^{0.5(BIC(S)_{min}-BIC(S)_{j})}}{\sum_{j}{e^{0.5(BIC(S)_{min}-BIC(S)_{j})}}}$$
+
+$$ B_{ij} = e^{0.5(BIC(S)_j - BIC(S)_i)} $$
